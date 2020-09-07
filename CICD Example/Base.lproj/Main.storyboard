@@ -15,26 +15,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb1-TZ-4E6">
-                                <rect key="frame" x="186" y="438" width="42" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O1u-4P-uFi">
+                                <rect key="frame" x="20" y="44" width="374" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="42G-Pi-gOt"/>
-                                    <constraint firstAttribute="height" constant="21" id="ZAa-Rg-uWT"/>
+                                    <constraint firstAttribute="height" constant="34" id="Eox-XQ-qdn"/>
+                                    <constraint firstAttribute="width" constant="374" id="h9A-gw-vv1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUK-Hh-41e">
+                                <rect key="frame" x="20" y="98" width="374" height="30"/>
+                                <state key="normal" title="Say Hello"/>
+                                <connections>
+                                    <action selector="sayHelloButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxr-oe-vX5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, persons Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb1-TZ-4E6">
+                                <rect key="frame" x="20" y="158" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4IW-p1-svk"/>
+                                    <constraint firstAttribute="width" constant="374" id="cnR-dK-eKB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eb1-TZ-4E6" secondAttribute="bottom" constant="403" id="0HO-UX-5KA"/>
-                            <constraint firstItem="eb1-TZ-4E6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="394" id="9ik-br-kjZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eb1-TZ-4E6" secondAttribute="trailing" constant="186" id="DQ5-ba-fUa"/>
-                            <constraint firstItem="eb1-TZ-4E6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="oLZ-d4-OOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O1u-4P-uFi" secondAttribute="trailing" constant="20" id="4Tw-gM-FHV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eb1-TZ-4E6" secondAttribute="trailing" constant="20" id="5hJ-bX-WRd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CUK-Hh-41e" secondAttribute="trailing" constant="20" id="6pU-mH-NY3"/>
+                            <constraint firstItem="CUK-Hh-41e" firstAttribute="top" secondItem="O1u-4P-uFi" secondAttribute="bottom" constant="20" id="MUO-Q4-AEz"/>
+                            <constraint firstItem="O1u-4P-uFi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y07-bc-nwn"/>
+                            <constraint firstItem="O1u-4P-uFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c7p-7C-1Fh"/>
+                            <constraint firstItem="CUK-Hh-41e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cjO-l8-m3L"/>
+                            <constraint firstItem="eb1-TZ-4E6" firstAttribute="top" secondItem="CUK-Hh-41e" secondAttribute="bottom" constant="30" id="kXx-ic-ceP"/>
+                            <constraint firstItem="eb1-TZ-4E6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rFz-5e-nT2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="eb1-TZ-4E6" id="57k-k9-fZ0"/>
+                        <outlet property="nameTextField" destination="O1u-4P-uFi" id="vcq-b7-xhH"/>
+                        <outlet property="sayHelloButton" destination="CUK-Hh-41e" id="Odb-j6-3P6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
